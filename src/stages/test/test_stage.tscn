@@ -1,0 +1,46 @@
+[gd_scene load_steps=4 format=3 uid="uid://yvyit5h62pg1"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_51s5v"]
+size = Vector2(210, 1080)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eef1g"]
+size = Vector2(1920, 270)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_trx2n"]
+size = Vector2(210, 1080)
+
+[node name="TestStage" type="Node2D"]
+
+[node name="Floor" type="StaticBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Floor"]
+position = Vector2(0, 810)
+texture = SubResource("PlaceholderTexture2D_51s5v")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
+position = Vector2(960, 945)
+shape = SubResource("RectangleShape2D_eef1g")
+
+[node name="LeftWall" type="StaticBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="LeftWall"]
+texture = SubResource("PlaceholderTexture2D_51s5v")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftWall"]
+position = Vector2(105, 540)
+shape = SubResource("RectangleShape2D_trx2n")
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="RightWall" type="StaticBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="RightWall"]
+position = Vector2(1710, 0)
+texture = SubResource("PlaceholderTexture2D_51s5v")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RightWall"]
+position = Vector2(1815, 540)
+shape = SubResource("RectangleShape2D_trx2n")
